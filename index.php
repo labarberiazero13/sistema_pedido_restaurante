@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Pedidos</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleLogin.css">    
 </head>
 <body>
-    <div class="container">
-    <h2>Efetue seu login</h2>    
+    <div class="container" id="tela_login">
+    <h2>Login</h2>    
     <form id="form_login" action="login.php" method="POST">
         <?php if (isset($resultado) && $resultado["cod"] == 0): ?>
             <div class="alert alert-danger">
@@ -20,7 +20,7 @@
         <br><br>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
         <br><br>
-        <input type="submit" id="submeter" value="Entrar" class="btn btn-primary">
+        <input class="button" type="submit" id="submeter" value="Entrar" class="btn btn-primary">
     </form>
     </div>
 </body>
