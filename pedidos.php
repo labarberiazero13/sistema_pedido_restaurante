@@ -5,21 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="styleLogin.css">-->
+    <link rel="stylesheet" href="stylePedidos.css">
     <title>Pedidos</title>
 </head>
 <body>
+    
     <div class="container">
         <form action="cadastrar_pedido.php" method="POST">
+        <fieldset>
+            <h2>Pedidos</h2>
+            <br>
             <div class="form-group">
                 <label for="nome_produto">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" placeholder="Digite o produto">
+                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
             </div>
             <div class="form-group">
                 <label for="qtd_produto">Quantidade:</label>
-                <input type="number" class="form-control" id="qtd_produto" size="4">
-            </div>  
-            <button type="submit" class="btn btn-primary">Realizar pedido</button>    
+                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="obs_produto">Obs:</label>
+                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
+            </div>
+            <div class="form-group">
+                <label for="preco_produto">Preço unitátio</label>
+                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
+            </div>
+        </fieldset>
+    <!--<br>
+        <fieldset>        
+        <div class="form-group">
+                <label for="nome_produto">Nome do produto:</label>
+                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
+            </div>
+            <div class="form-group">
+                <label for="qtd_produto">Quantidade:</label>
+                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
+            </div> 
+            <div class="form-group">
+                <label for="obs_produto">Obs:</label>
+                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
+            </div>
+            <div class="form-group">
+                <label for="preco_produto">Preço unitátio</label>
+                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
+            </div> 
+        </fieldset>
+        <br>
+        <fieldset>
+        <div class="form-group">
+                <label for="nome_produto">Nome do produto:</label>
+                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
+            </div>
+            <div class="form-group">
+                <label for="qtd_produto">Quantidade:</label>
+                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
+            </div> 
+            <div class="form-group">
+                <label for="obs_produto">Obs:</label>
+                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
+            </div>
+            <div class="form-group">
+                <label for="preco_produto">Preço unitátio</label>
+                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
+            </div> 
+        </fieldset>
+        <br>
+        <fieldset>
+        <div class="form-group">
+                <label for="nome_produto">Nome do produto:</label>
+                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
+            </div>
+            <div class="form-group">
+                <label for="qtd_produto">Quantidade:</label>
+                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
+            </div> 
+            <div class="form-group">
+                <label for="obs_produto">Obs:</label>
+                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
+            </div>
+            <div class="form-group">
+                <label for="preco_produto">Preço unitátio</label>
+                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
+            </div> 
+        </fieldset>-->
+        <br>     
+            <button type="submit" class="btn btn-primary">Adicionar item</button>    
         </form>
     </div>
 </body>
