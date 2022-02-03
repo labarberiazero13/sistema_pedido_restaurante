@@ -7,14 +7,8 @@
         $preco = $_POST['preco_produto'];
         //codigo do usuário
 
-        // conexao BD//
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=sistema", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include("conexao_bd.php");
 //echo "Conectado com sucesso";//
 
 //verificando dados do usuário//
