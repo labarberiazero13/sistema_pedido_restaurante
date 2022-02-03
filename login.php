@@ -14,13 +14,13 @@ try {
 //echo "Conectado com sucesso";//
 
 //verificando dados do usuário//
-  $stmt = $conn->prepare("SELECT codigo FROM tbusuario WHERE email=:email AND senha=md5(:senha)");
-  $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-  $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-  $stmt->execute();
+  $consulta = $conn->prepare("SELECT codigo FROM tbusuario WHERE email=:email AND senha=md5(:senha)");
+  $consulta->bindParam(':email', $email, PDO::PARAM_STR);
+  $consulta->bindParam(':senha', $senha, PDO::PARAM_STR);
+  $consulta->execute();
 
-  $result = $stmt->fetchALL();
-  $qtd_usuarios = count($result);
+  $r = $consulta->fetchALL();
+  $qtd_usuarios = count($r);
   if($qtd_usuarios == 1){
     //TODO substituindo o redicionamento//
     $resultado["msg"] =  "Usuário encontrado!";
