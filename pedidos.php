@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="preco_produto">Preço unitátio</label>
-                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
+                <input type="text" class="form-control" id="preco_produto" name="preco_produto" maxlength="10">
             </div>
         </fieldset>
     <!--<br>
