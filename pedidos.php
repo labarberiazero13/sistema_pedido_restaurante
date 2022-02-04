@@ -11,16 +11,16 @@
 <body>    
     <div class="container">
         <form action="cadastrar_pedido.php" method="POST">
+        <h2>Escolha os itendo do pedido</h2>
         <fieldset>
-            <h2>Adicione Itens</h2>
             <br>
             <div class="form-group">
                 <label for="nome_produto">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
+                <input type="text" required class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
             </div>
             <div class="form-group">
                 <label for="qtd_produto">Quantidade:</label>
-                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
+                <input type="number" required class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
             </div>
             <div class="form-group">
                 <label for="obs_produto">Obs:</label>
@@ -31,7 +31,7 @@
                 <input type="text" class="form-control" id="preco_produto" name="preco_produto" maxlength="10">
             </div>
         </fieldset>
-        <br>     
+            <br>     
             <button type="submit" class="btn btn-primary">Adicionar item</button>    
             <?php if( isset($resultado) ): ?>
                     <div class="alert <?=$resultado["style"]?>">
