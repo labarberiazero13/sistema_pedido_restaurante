@@ -24,11 +24,10 @@ try {
   
 }
 catch(PDOException $e) {
-    echo "Inserção no banco de dados falhou:" . $e->getMessage();
-    $resultado["msg"] = "Item não inserido!";
+    $resultado["msg"] = "Inserção no banco de dados falhou:" . $e->getMessage();
     $resultado["cod"] = 0;
-
 }
     $conn = null;
 }
+    include("pedidos.php");
 ?>

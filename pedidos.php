@@ -91,6 +91,18 @@
         </fieldset>-->
         <br>     
             <button type="submit" class="btn btn-primary">Adicionar item</button>    
+            <?php if( isset($resultado) ): ?>
+                <?php if($resultado["cod"] == 1 ): ?>
+                    <div class="alert alert-success">
+                        <?php echo $resultado["msg"]; ?> 
+                    </div>
+                <?php endif; ?>
+                <?php if($resultado["cod"] == 0 ): ?>
+                    <div class="alert alert-danger" >
+                        <?php echo $resultado["msg"]; ?>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?> 
         </form>
     </div>
 </body>
