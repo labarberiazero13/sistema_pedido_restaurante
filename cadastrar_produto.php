@@ -19,16 +19,6 @@
         //codigo do usuário
         $stmt->execute([$nome, $categoria, $valor, $foto, $info, null]);
 
-         //pegando os produtos no BD//
-        $consulta = $conn->prepare("SELECT * FROM produtos");
-        $consulta->execute();
-
-        $resultado["produtos"] = $consulta->fetchALL();
-        echo "<pre>";
-        print_r($resultado["produtos"]);
-        echo "</pre>";
-        exit;
-
         $resultado["msg"] =  "Item inserido com sucesso!";
         $resultado["cod"] = 1;
         $resultado["style"] = "alert-success";
