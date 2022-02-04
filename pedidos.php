@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylePedidos.css">
-    <title>Pedidos</title>
+    <link rel="stylesheet" href="./style/styleItens.css">
+    <title>Adicionar Itens</title>
 </head>
 <body>    
     <div class="container">
         <form action="cadastrar_pedido.php" method="POST">
         <fieldset>
-            <h2>Pedidos</h2>
+            <h2>Adicione Itens</h2>
             <br>
             <div class="form-group">
                 <label for="nome_produto">Nome do produto:</label>
