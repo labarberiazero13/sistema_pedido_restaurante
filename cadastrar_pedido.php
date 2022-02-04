@@ -19,13 +19,15 @@ try {
  //codigo do usuário
     $stmt->execute([null, $nome, $obs, $preco, $qtd]);
 
-    $resultado["msg"] =  "Item inserido!";
+    $resultado["msg"] =  "Item inserido com sucesso!";
     $resultado["cod"] = 1;
+    $resultado["style"] = "alert-success";
   
 }
 catch(PDOException $e) {
     $resultado["msg"] = "Inserção no banco de dados falhou:" . $e->getMessage();
     $resultado["cod"] = 0;
+    $resultado["style"] = "alert-danger";
 }
     $conn = null;
 }

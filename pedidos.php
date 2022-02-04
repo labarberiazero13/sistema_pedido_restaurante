@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="stylePedidos.css">
     <title>Pedidos</title>
 </head>
-<body>
-    
+<body>    
     <div class="container">
         <form action="cadastrar_pedido.php" method="POST">
         <fieldset>
@@ -32,76 +31,12 @@
                 <input type="text" class="form-control" id="preco_produto" name="preco_produto" maxlength="10">
             </div>
         </fieldset>
-    <!--<br>
-        <fieldset>        
-        <div class="form-group">
-                <label for="nome_produto">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
-            </div>
-            <div class="form-group">
-                <label for="qtd_produto">Quantidade:</label>
-                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
-            </div> 
-            <div class="form-group">
-                <label for="obs_produto">Obs:</label>
-                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
-            </div>
-            <div class="form-group">
-                <label for="preco_produto">Preço unitátio</label>
-                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
-            </div> 
-        </fieldset>
-        <br>
-        <fieldset>
-        <div class="form-group">
-                <label for="nome_produto">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
-            </div>
-            <div class="form-group">
-                <label for="qtd_produto">Quantidade:</label>
-                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
-            </div> 
-            <div class="form-group">
-                <label for="obs_produto">Obs:</label>
-                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
-            </div>
-            <div class="form-group">
-                <label for="preco_produto">Preço unitátio</label>
-                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
-            </div> 
-        </fieldset>
-        <br>
-        <fieldset>
-        <div class="form-group">
-                <label for="nome_produto">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite o produto">
-            </div>
-            <div class="form-group">
-                <label for="qtd_produto">Quantidade:</label>
-                <input type="number" class="form-control" id="qtd_produto" name="qtd_produto" maxlength="10">
-            </div> 
-            <div class="form-group">
-                <label for="obs_produto">Obs:</label>
-                <input type="text" class="form-control" id="obs_produto" name="obs_produto" placeholder="Digite a observação">
-            </div>
-            <div class="form-group">
-                <label for="preco_produto">Preço unitátio</label>
-                <input type="text" class="form-control" id="preco_produto" name="qtd_produto" maxlength="10">
-            </div> 
-        </fieldset>-->
         <br>     
             <button type="submit" class="btn btn-primary">Adicionar item</button>    
             <?php if( isset($resultado) ): ?>
-                <?php if($resultado["cod"] == 1 ): ?>
-                    <div class="alert alert-success">
+                    <div class="alert <?=$resultado["style"]?>">
                         <?php echo $resultado["msg"]; ?> 
                     </div>
-                <?php endif; ?>
-                <?php if($resultado["cod"] == 0 ): ?>
-                    <div class="alert alert-danger" >
-                        <?php echo $resultado["msg"]; ?>
-                    </div>
-                <?php endif; ?>
             <?php endif; ?> 
         </form>
     </div>
