@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="categoria_produto">Categoria:</label>
-                <input type="text" required class="form-control" id="categoria_produto" aria-describedby="nomeHelp" name="nome_produto" placeholder="Digite a categoria do produto">
+                <input type="text" required class="form-control" id="categoria_produto" aria-describedby="nomeHelp" name="categoria_produto" placeholder="Digite a categoria do produto">
             </div>
             <div class="form-group">
                 <label for="valor_produto">Valor unitátio (R$):</label>

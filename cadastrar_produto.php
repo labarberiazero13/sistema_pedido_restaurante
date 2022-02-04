@@ -1,28 +1,28 @@
 <?php
     if (count($_POST) > 0){
         //valores do formulário
-        $nome = $_POST['nome_produto'];
-        $qtd = $_POST['qtd_produto'];
-        $obs = $_POST['obs_produto'];
-        $preco = $_POST['preco_produto'];
-        //codigo do usuário
+    $nome = $_POST['nome_produto'];
+    $categoria = $_POST['categoria_produto'];
+    $valor = $_POST['valor_produto'];
+    $foto = $_POST['foto_produto'];
+    $info = $_POST['info_produto'];
 
 try {
     include("conexao_bd.php");
-
-
+        
+        
 //verificando dados do usuário//
-    $sql = "INSERT INTO item_pedido 
-    (cod_usuario, nome_produto, observacao, preco_und, quantidade) 
-    VALUES (?,?,?,?,?)";
+    $sql = "INSERT INTO produto 
+    (nome, categoria, valor, foto, info_adicional, codigo_usuario) 
+    VALUES (?,?,?,?,?,?)";
     $stmt= $conn->prepare($sql);
- //codigo do usuário
-    $stmt->execute([null, $nome, $obs, $preco, $qtd]);
-
+    //codigo do usuário
+    $stmt->execute([$nome, $categoria, $valor, $foto, $info, null]);
+        
     $resultado["msg"] =  "Item inserido com sucesso!";
     $resultado["cod"] = 1;
     $resultado["style"] = "alert-success";
-  
+          
 }
 catch(PDOException $e) {
     $resultado["msg"] = "Inserção no banco de dados falhou:" . $e->getMessage();
@@ -30,6 +30,6 @@ catch(PDOException $e) {
     $resultado["style"] = "alert-danger";
 }
     $conn = null;
-}
-    include("pedidos.php");
+}   
+
 ?>
