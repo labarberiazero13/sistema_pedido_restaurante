@@ -1,7 +1,7 @@
 <?php
 
 try{
-    include("conexao_bd.php")
+    include("conexao_bd.php");
     //pegando os produtos no BD//
     $consulta = $conn->prepare("SELECT * FROM produtos");
     $consulta->execute();
