@@ -44,16 +44,22 @@
             <?php endif; ?>        
     </form>
     <br>
+    
     <?php include("selecionar_produto.php"); ?>
+
+    <?php if(count($produtos) > 0): ?>
+            <h4>Produtos Cadastradados</h4>
+
     <table class="table">
         <tr>
-            <td>Cód.</td>
-            <td>Foto</td>
-            <td>Nome</td>
-            <td>Categoria</td>
-            <td>Valor</td>
-            <td>Info Adicional</td>
-            <td>Data/Hora</td>
+            <th>Cód.</th>
+            <th>Foto</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Valor</th>
+            <th>Info</th>
+            <th>Data/Hora</th>
+            <th></th>
         </tr>
         <?php foreach($produtos as $p): ?>
         <tr>
@@ -64,9 +70,14 @@
             <td><?= $p["valor"]; ?></td>
             <td><?= $p["info_adicional"]; ?></td>
             <td><?= $p["data_hora"]; ?></td>
+            <td>
+                <button class="btn btn-outline-warning btn-sm">Alterar</button>
+                <button class="btn btn-outline-danger btn-sm">Remover</button>
+            </td>
         </tr>
         <?php endforeach; ?>
     </table>
+    <?php endif; ?>
 </div>
 <br><br><br><br><br><br><br><br><br><br>
 </body>
